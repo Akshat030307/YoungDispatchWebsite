@@ -1,14 +1,16 @@
 {
-  "builds": [
-    {
-      "src": "dist/server/server.js",
-      "use": "@vercel/node"
+  "buildCommand": "npm install --legacy-peer-deps && npm run build",
+  "outputDirectory": "dist",
+  "framework": null,
+  "functions": {
+    "dist/server/server.js": {
+      "runtime": "nodejs20.x"
     }
-  ],
+  },
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "dist/server/server.js"
+      "dest": "/dist/server/server.js"
     }
   ]
 }
