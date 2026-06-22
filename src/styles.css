@@ -4,9 +4,17 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@font-face {
+  font-family: 'Ahsing';
+  src: url('@/assets/Ahsing.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme inline {
   --font-display: "Anton", "Archivo Black", system-ui, sans-serif;
-  --font-logo: "Bodoni Moda", Georgia, serif;
+  --font-logo: "Ahsing", serif;
   --font-serif: "Bodoni Moda", Georgia, serif;
   --font-sans: "Inter", system-ui, sans-serif;
 

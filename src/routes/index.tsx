@@ -44,12 +44,6 @@ const SECTIONS = [
     description: "Politics, IR, economics, global & national affairs.",
   },
   {
-    id: "the-view",
-    kicker: "The View",
-    name: "The View",
-    description: "Editorials & articles written by us & other writers.",
-  },
-  {
     id: "the-scene",
     kicker: "The Scene",
     name: "The Scene",
@@ -117,7 +111,7 @@ function Logo({ className = "" }: { className?: string }) {
         <span className="italic text-[color:var(--ink)]" style={{ fontFamily: "'Bodoni Moda', Georgia, serif", fontWeight: 900 }}>
           THE
         </span>
-        <span className="not-italic text-[color:var(--brand)]" style={{ fontFamily: "'Anton', sans-serif", letterSpacing: "-0.01em" }}>
+        <span className="text-[color:var(--brand)]" style={{ fontFamily: "'Ahsing', serif", fontSize: "1.4em" }}>
           YOUNG
         </span>
         <span className="italic text-[color:var(--ink)]" style={{ fontFamily: "'Bodoni Moda', Georgia, serif", fontWeight: 900 }}>
@@ -131,11 +125,11 @@ function Logo({ className = "" }: { className?: string }) {
 function FooterLogo({ className = "" }: { className?: string }) {
   return (
     <Link to="/" className={`leading-none ${className}`} style={{ fontFamily: "inherit" }}>
-      <span className="flex flex-col leading-[0.95]">
+      <span className="flex items-baseline gap-[0.35em]">
         <span className="italic text-white" style={{ fontFamily: "'Bodoni Moda', Georgia, serif", fontWeight: 900 }}>
           THE
         </span>
-        <span className="not-italic text-[color:var(--brand)]" style={{ fontFamily: "'Anton', sans-serif", letterSpacing: "-0.01em" }}>
+        <span className="text-[color:var(--brand)]" style={{ fontFamily: "'Ahsing', serif", fontSize: "1.4em" }}>
           YOUNG
         </span>
         <span className="italic text-white" style={{ fontFamily: "'Bodoni Moda', Georgia, serif", fontWeight: 900 }}>
@@ -336,48 +330,6 @@ function Home() {
             title="How a trade war became a TikTok trend."
             author="Priya Mehta"
           />
-        </div>
-      </section>
-
-      {/* ── THE VIEW ── */}
-      <section id="the-view" className="border-b border-border">
-        <SectionHeader kicker="The View" title="Editorials & essays by us and our writers" />
-        <div className="mx-auto max-w-[1400px] px-4 pb-16">
-          {/* Featured editorial */}
-          <div className="grid grid-cols-1 gap-8 border-b border-border pb-12 lg:grid-cols-12">
-            <div className="lg:col-span-5">
-              <img
-                src={story1}
-                alt="The View featured editorial"
-                className="aspect-[3/2] w-full object-cover"
-              />
-            </div>
-            <div className="flex flex-col justify-center lg:col-span-7">
-              <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[color:var(--brand)]">Opinion</span>
-              <h3 className="mt-3 font-serif text-3xl font-black leading-tight sm:text-4xl">
-                What 'cringe' meant in 2014 vs. now — and why that shift matters.
-              </h3>
-              <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                The word has done a full 180. Once a weapon, now almost a term of endearment. Tracing how a generation reclaimed its most embarrassing label.
-              </p>
-              <p className="mt-4 text-[12px] uppercase tracking-[0.2em] text-muted-foreground">By Zara Ahmed · 8 min read</p>
-              <a href="#" className="mt-6 inline-flex w-fit items-center gap-2 border border-[color:var(--ink)] px-5 py-3 text-[12px] font-bold uppercase tracking-[0.25em] hover:bg-[color:var(--ink)] hover:text-white">
-                Read essay <ArrowUpRight className="h-4 w-4" />
-              </a>
-            </div>
-          </div>
-          {/* More editorials */}
-          <div className="grid grid-cols-1 gap-x-8 gap-y-8 pt-12 md:grid-cols-2">
-            {SECTION_ARTICLES["the-view"].slice(0, 2).map((a) => (
-              <article key={a.title} className="group border-b border-border pb-8">
-                <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-[color:var(--brand)]">{a.tag}</span>
-                <h4 className="mt-2 font-serif text-xl font-bold leading-snug group-hover:text-[color:var(--brand)] md:text-2xl">
-                  <a href="#">{a.title}</a>
-                </h4>
-                <p className="mt-3 text-[12px] uppercase tracking-[0.2em] text-muted-foreground">By {a.author}</p>
-              </article>
-            ))}
-          </div>
         </div>
       </section>
 
